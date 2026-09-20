@@ -91,6 +91,7 @@ This library provides a default configuration for common targets:
   * [x] Steam Deck
 * [x] Windows
 * [x] macOS (no cross compilation due to Apple licensing)
+* [x] iOS (no cross compilation due to Apple licensing, requires `--sysroot "$(xcrun --sdk iphoneos --show-sdk-path)"`)
 * [ ] [Emscripten (help wanted!)](https://github.com/allyourcodebase/SDL/issues/5)
 * [ ] [Consoles (help wanted!)](https://github.com/allyourcodebase/SDL/issues/6)
 

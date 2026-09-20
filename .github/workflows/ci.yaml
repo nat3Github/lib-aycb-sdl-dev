@@ -47,3 +47,9 @@ jobs:
         # We don't support cross compiling for macOS, so don't set a target just build
         # the native target
         run: zig build example --summary all
+
+      - name: Build for iOS
+        if: runner.os == 'macOS'
+        # No cross compilation for Apple platforms, and the iOS SDK is not bundled with Zig, so
+        # point Zig at Xcode's iPhoneOS SDK.
+        run: zig build -Dtarget=aarch64-ios --sysroot "$(xcrun --sdk iphoneos --show-sdk-path)" --summary all
